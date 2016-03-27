@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/base_bg"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_audio_player"
+    >
+
+    <!--
+     这两个属性必须添加，才能正确的将toolBar和其下面的内容显示出来
+     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_audio_player"
+
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_visual_effect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/anim_visual_effect" />
+
+        <TextView
+            android:id="@+id/tv_artist"
+            style="@style/item_textview"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="guangliang"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+        <lenovo.com.videoandmusicplayer.widget.LyricsView
+            android:id="@+id/lyrics"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="这里是歌词" />
+
+        <TextView
+            android:id="@+id/tv_play_time"
+            style="@style/item_textview"
+            android:layout_marginRight="10dp"
+            android:text="00:00/00:00"
+            android:textColor="@color/white"
+           android:layout_gravity="right"
+            />
+
+    <SeekBar
+        android:id="@+id/sb_audio"
+        style="@android:style/Widget.SeekBar"
+        android:progressDrawable="@drawable/progress_audio"
+        android:thumb="@mipmap/audio_seek_thumb"
+        android:minHeight="4dp"
+        android:maxHeight="4dp"
+        android:progress="50"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+        <View style="@style/placeholder"/>
+
+        <Button
+            android:id="@+id/btn_play_mode"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_playmode_order"
+            />
+
+        <View style="@style/placeholder"/>
+
+        <Button
+            android:id="@+id/btn_pre"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/selector_audio_btn_pre"
+            />
+
+        <View style="@style/placeholder"/>
+
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/selector_audio_btn_play"
+            />
+
+        <View style="@style/placeholder"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/selector_audio_btn_next"
+            />
+
+        <View style="@style/placeholder"/>
+
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/selector_audio_btn_lyrics"
+            />
+
+        <View style="@style/placeholder"/>
+
+    </LinearLayout>
+
+</LinearLayout>
